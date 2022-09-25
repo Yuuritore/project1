@@ -1,0 +1,664 @@
+.cf:before,
+.cf:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.cf:after {
+    clear: both;
+}
+
+/**
+ * For IE 6/7 only
+ * Include this rule to trigger hasLayout and contain floats.
+ */
+.cf {
+    *zoom: 1;
+}
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+@keyframes latar{
+    0%{
+        background: #f8f8ff;
+    }
+    20%{
+        background: #cac9cd;
+    }
+    40%{
+        background: #9b9a9c ;
+    }
+    60%{
+        background: #6d6a6a;
+    }
+    80%{
+        background: #3e3b39 ;
+    }
+    100%{
+        background: #100c07;
+    }
+}
+
+body{
+    font: 12px/28px arial, sans-serif;
+    border-radius: 50%;
+    animation: latar 3500ms infinite alternate linear;
+
+}
+
+.container{
+    width: 800px;
+    margin: auto;
+    background-color: whitesmoke;
+    box-sizing: border-box;
+}
+
+.header{
+    padding: 20px;
+}
+
+.header .judul{
+    font-size: 40px;
+    font-weight: bold;
+    color: #212930;
+}
+
+.header ul li{
+   display: inline-block;
+   padding-top: 10px;
+   padding-right: 10px;
+}
+
+
+.header a {
+    text-decoration: none;
+    color: #414b56;
+    font-weight: bold;
+    padding: 5px;
+    transition: 800ms;
+}
+
+.header a:hover{
+    transform: translateZ();
+    color:white;
+    background-color:#606a74;
+
+}
+
+
+.kotak_gambar{
+    height: 300px;
+    width: auto;
+    background-color: ghostwhite;
+    border-top:5px solid #464548;
+    border-bottom:5px solid #464548;
+}
+
+.one{
+    background-image: url(EX/karakter1.png);
+    height: 100px;
+    width: 100px;
+    display: flex;
+    position: relative;
+    bottom:55%;
+    left: 71%;
+    opacity:0;
+}
+
+@keyframes one1 {
+    from{} 
+    to{
+       transform: translate(-40px,-15px); 
+       opacity: 2;
+    }
+}
+.kotak_gambar:hover .one{
+    animation: one1 900ms 1000ms linear forwards;
+}
+
+.main{
+    background-image: url(EX/main.png);
+    height: 110px;
+    width: 110px;
+    display: flex;
+    position: relative;
+    top: -210px;
+    right :-390px;
+    transition-duration:2s ;
+    opacity: 0;
+}
+
+.kotak_gambar:hover .main{
+    opacity: 1;
+    transform: translate(10px,-10px);
+}
+
+.two{
+    background-image: url(EX/karakter2.png);
+    height: 100px;
+    width: 100px;
+    display: block;
+    position: relative;
+    top: -310px;
+    right: -310px;
+    transition-duration: 2s;
+    opacity: 0;
+}
+
+.kotak_gambar:hover .two{
+    transform:translate(-18px,-25px) ;
+    opacity: 1;
+}
+
+.tree{
+    background-image: url(EX/karakter3.png);
+    width: 100px;
+    height: 100px;
+    top: -625px;
+    right: -560px;
+    display: block;
+    position: relative;
+    opacity: 0;
+}
+
+@keyframes tree3{
+    from{}
+    to{
+        opacity: 1;
+        transform: translate(-70px,15px);
+    }
+}
+
+.kotak_gambar:hover .tree{
+    animation: tree3 1500ms 500ms linear forwards;
+}
+
+.for{
+    background-image: url(EX/karakter4.png);
+    height: 100px;
+    width: 100px;
+    display: block;
+    position: relative;
+    top: -730px;
+    right: -600px;
+    opacity: 0;
+}
+
+@keyframes for4 {
+    from{
+
+    }
+    to{
+        opacity: 1;
+        transform: translate(-15px,80px)
+    }
+}
+
+.kotak_gambar:hover .for{
+    animation: for4 1500ms 500ms linear forwards;
+}
+
+.five{
+    background-image: url(EX/karakter5.png);
+    width: 100px;
+    height: 100px;
+    position: relative;
+    top: -660px;
+    right: -660px;
+    opacity: 0;
+}
+
+@keyframes five5 {
+    from{
+
+    }
+    to{
+        opacity: 1;
+        transform: translateX(-40px);
+    }
+}
+
+.kotak_gambar:hover .five{
+    animation: five5 1s 2000ms linear forwards;
+}
+
+.six{
+    background-image: url(EX/karakter6.png);
+    width: 100px;
+    height: 100px;
+    display: block;
+    position: relative;
+    top: -820px;
+    right: -670px;
+    opacity: 0;
+}
+
+@keyframes six6{
+    from{
+
+    }
+    to{
+        opacity: 1;
+        transform: translateY(-20px)
+    }
+}
+
+.kotak_gambar:hover .six{
+    animation: six6 1s 1400ms linear forwards;
+}
+
+.seven{
+    background-image: url(EX/karakter7.png);
+    width: 100px;
+    height: 100px;
+    position: relative;
+    display: block;
+    top: -815px;
+    right: -700px;
+    opacity: 0;
+}
+
+@keyframes seven7{
+    from{
+
+    }
+    to{
+        opacity: 1;
+        transform: translateY(-5px);
+    }
+}
+.kotak_gambar:hover .seven{
+    animation: seven7 1s 1800ms linear forwards;
+}
+
+.eight{
+    background-image: url(EX/karakter8.png);
+    width: 100px;
+    height: 100px;
+    display: block;
+    position: relative;
+    top: -930px;
+    right: -160px;
+    opacity: 0;
+}
+
+@keyframes eight8{
+    from{
+
+    }
+    to{
+        opacity: 1;
+        transform: translate(50px,-40px);
+    }
+}
+
+.kotak_gambar:hover .eight{
+    animation: eight8 1s 1000ms linear forwards;
+}
+
+.nine{
+    background-image: url(EX/karakter9.png) ;
+    display: block;
+    position: relative;
+    width: 100px;
+    height: 100px;
+    top: -1240px;
+    right: -190px;
+    opacity: 0;
+}
+
+@keyframes nine9{
+    from{
+
+    }
+    to{
+        opacity: 1;
+        transform: translateY(80px);
+    }
+}
+
+.kotak_gambar:hover .nine{
+    animation: nine9 1s 2855ms linear forwards;
+}
+
+.ten{
+    background-image: url(EX/karakter10.png);
+    width: 100px;
+    height: 100px;
+    display: block;
+    position: relative;
+    top: -1220px;
+    right: -705px;
+    opacity: 0;
+}
+
+@keyframes ten10{
+    from{
+
+    }
+    to{
+        opacity: 1;
+        transform: translate(-20px,-40px);
+    }
+}
+
+.kotak_gambar:hover .ten{
+    animation: ten10 1s 1200ms linear forwards;
+}
+
+.sebelas{
+    background-image: url(EX/karakter11.png);
+    width: 100px;
+    height: 100px;
+    display: block;
+    position: relative;
+    top: -1400px;
+    right: -130px;
+    opacity: 0;
+}
+
+@keyframes sebelas11{
+    from{
+
+    }
+    to{
+        opacity: 1;
+        transform: translate(95px,-20px);
+    }
+}
+
+.kotak_gambar:hover .sebelas{
+    animation: sebelas11 1s 700ms linear forwards
+}
+
+.duabelas{
+    background-image: url(EX/karakter12.png);
+    width: 100px;
+    height: 100px;
+    display: block;
+    position: relative;
+    top: -1490px;
+    right: -80px;
+    opacity: 0;
+}
+
+@keyframes duabelas12{
+    from{
+
+    }
+    to{
+        opacity: 1;
+        transform: translate(80px,-60px);
+    }
+}
+
+.kotak_gambar:hover .duabelas{
+    animation: duabelas12 1s 1500ms linear forwards;
+}
+
+.tigabelas{
+    background-image: url(EX/karakter13.png);
+    width: 100px;
+    height: 100px;
+    display: block;
+    position: relative;
+    top: -1595px;
+    right: -630px;
+    opacity: 0;
+}
+
+@keyframes tigabelas13{
+    from{
+
+    }
+    to{
+        opacity: 1;
+        transform: translate(-65px,-30px);
+    }
+}
+
+.kotak_gambar:hover .tigabelas{
+    animation: tigabelas13 1s 2600ms linear forwards;
+}
+
+.empatbelas{
+    background-image: url(EX/karakter14.png);
+    width: 100px;
+    height: 100px;
+    display: block;
+    position: relative;
+    top: -1760px;
+    right: -650px;
+    opacity: 0;
+}
+
+@keyframes empatbelas14{
+    from{}
+    to{
+        opacity: 1;
+        transform: translateY(20px);
+    }
+}
+
+.kotak_gambar:hover .empatbelas{
+    animation: empatbelas14 1s 2800ms linear forwards;
+}
+
+.limabelas{
+    background-image: url(EX/karakter15.png);
+    width: 100px;
+    height: 100px;
+    display: block;
+    position: relative;
+    top: -1770px;
+    right: 20px;
+    opacity: 0;
+}
+
+@keyframes limabelas15{
+    from{}
+    to{
+        opacity: 1;
+        transform: translate(80px,-60px);
+    }
+}
+
+.kotak_gambar:hover .limabelas{
+    animation: limabelas15 1s 2990ms linear forwards;
+}
+
+.shadow{
+    width: 100px;
+    height: 100px;
+    display: block;
+    position: relative;
+    background-image: url(EX/shadow.png);
+    top: -1860px;
+    right: -360px;
+    opacity: 0%;
+}
+
+@keyframes shadows{
+    0%{opacity:10%;}
+    40%{
+        opacity: 50%;
+    }
+
+    60%{
+        opacity: 70%;
+    }
+    70%{
+        opacity: 70%;
+    }
+    80%{
+        opacity: 50%;
+    }
+    100%{
+        opacity: 10%;
+    }
+}
+
+.kotak_gambar:hover .shadow{
+    animation: shadows 1800ms 0ms linear infinite;
+}
+
+.konten{
+    padding: 20px;
+}
+.konten h2{
+    font-family: 'happys';
+    font-size: 28px;
+    color: #323232;
+}
+.konten .penulis{
+    margin-top: -5px;
+}
+.konten .penulis a{
+    font-size: 14px;
+    color: #536976;
+    font-weight: bold;
+    text-decoration: none;
+}
+.konten p{
+    margin-bottom: 20px;
+}
+
+@font-face{
+    font-family: 'happys';
+    src: url(font/happy_school/Happy\ School.otf);
+}
+
+.container2{
+    width: 800px;
+    height: 170px;
+    background-color: #100c07;
+    position: relative;
+}
+
+.html{
+    position: relative;
+    top: 15px;
+    right: -20px;
+    text-align: left;
+    transition-duration: 1800ms;
+}
+.container2 :hover .html{
+    transform: translateY(-20px);
+}
+.ibis{
+    position: relative;
+    top: -115px;
+    text-align: center;
+    transition-duration: 1s;
+}
+.container2 :hover .ibis{
+    transform: translateY(-25px);
+}
+.css{
+    position: relative;
+    text-align: right;
+    top: -245px;
+    left: -37px;
+    transition-duration: 1800ms;
+}
+.container2 :hover .css{
+    transform: translateY(-20px);
+}
+.thtml{
+    font-family: 'happys';
+    color: whitesmoke;
+    font-size: 30px ;
+    position:absolute;
+    left: 25px;
+    bottom: 5px;
+    transition: 1600ms;
+    opacity: 0;
+}
+.container2:hover .thtml{
+    opacity: 1;
+    transform: translateY(40px);
+}
+.tibis{
+    font-family: 'happys';
+    color: whitesmoke;
+    font-size: 30px;
+    position: absolute;
+    left: 340px;
+    bottom: 10px;
+    transition: 1100ms;
+    opacity: 0;
+}
+.container2:hover .tibis{
+    opacity: 1;
+    transform: translateY(50px);
+}
+.tcss{
+    font-family: 'happys';
+    color: whitesmoke;
+    font-size: 30px;
+    position: absolute;
+    right: 12px;
+    bottom:10px;
+    transition: 1600ms;
+    opacity: 0;
+}
+.container2:hover .tcss{
+    opacity: 1;
+    transform: translateY(47px);
+}
+
+/* template animasi 1st project */
+@-webkit-keyframes typing { from { width: 0; } }
+@-webkit-keyframes blink-caret { 50% { border-color: transparent; } }
+
+.judul { 
+	font: bold 300% arial;
+	border-right: .1em solid black;
+	width: 16.5em; 
+	width: 21ch;
+	white-space: nowrap;
+	overflow: hidden;
+	-webkit-animation: typing 5s infinite steps(30, end),
+	           blink-caret .5s step-end  infinite alternate;
+}
